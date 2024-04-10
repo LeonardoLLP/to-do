@@ -1,0 +1,16 @@
+h1 {
+    padding-left: 30px;
+    padding-top: 30px;
+    color: #ddd;
+}
+
+body {
+    background-color: #111113;
+}
+
+hr {
+    height: 3px;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
