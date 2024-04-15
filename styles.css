@@ -23,6 +23,7 @@ ul {
     margin-left: 30px;
     margin-right: 30px;
     padding: 0;
+    font-size: 15px;
 }
 
 li {
@@ -37,10 +38,27 @@ li#add-button {
     padding-left: 1rem;
 }
 
-li:hover {
+li#add-button:hover {
     color: gray;
 }
 
 ul#todo-list {
     list-style-type: none;
+}
+
+.todo-item {
+    height: 2rem;
+}
+
+.item-check {
+    width: 22px;
+    height: 100%;
+    display: inline;
+}
+
+.item-text {
+    display: inline;
+    height: 100%;
+    width: 50px;
+    margin-top: 0;
 }
