@@ -3,6 +3,10 @@
 let todoList = document.querySelector("#todo-list");
 let add_button = document.querySelector("#add-button")
 
+function deleteParentItem(e) {
+    e.target.parentNode.remove();
+}
+
 
 
 function addButton() {
@@ -14,6 +18,7 @@ function addButton() {
 
     let new_checkbox = document.createElementNS(svg_url, "svg");
     new_checkbox.classList.add("item-check");
+    new_checkbox.addEventListener("click", deleteParentItem);
 
     let square = document.createElementNS(svg_url, "rect");
     square.setAttribute("width", 20);
