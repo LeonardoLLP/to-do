@@ -1,12 +1,13 @@
-h1 {
-    padding-left: 30px;
-    padding-top: 30px;
-    color: #ddd;
-}
-
 body {
     background-color: #111113;
     color: white;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #ddd;
 }
 
 hr {
@@ -18,9 +19,22 @@ hr {
     border-radius: 30px;
 }
 
+ul {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0;
+}
+
 li {
     display: block;
     width: 100%;
+    box-sizing: border-box;
+}
+
+li#add-to-do {
+    border: 5px solid white;
+    cursor: default;
+    padding-left: 1rem;
 }
 
 li:hover {
