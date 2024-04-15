@@ -1,3 +1,7 @@
+:root {
+    --checkbox-width: 22px;
+}
+
 body {
     background-color: #111113;
     color: white;
@@ -34,7 +38,7 @@ li {
 
 li#add-button {
     border: 5px solid white;
-    cursor: default;
+    cursor: pointer;
     padding-left: 1rem;
 }
 
@@ -48,17 +52,43 @@ ul#todo-list {
 
 .todo-item {
     height: 2rem;
+    position: relative;
 }
 
 .item-check {
-    width: 22px;
+    width: var(--checkbox-width);
     height: 100%;
-    display: inline;
+    display: inline-block;
 }
 
-.item-text {
-    display: inline;
+.item-textarea {
+    width: calc(100% - var(--checkbox-width));
     height: 100%;
-    width: 50px;
-    margin-top: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: var(--checkbox-width);
+
+}
+.item-textarea:hover {
+    cursor: text;
+}
+
+
+.item-text {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 1rem);
+    margin: 0;
+    padding-left: 1rem;
+    text-align: begin;
+    color: white;
+    vertical-align: middle;
+    position: relative;
+    background: transparent;
+    border: none;
+}
+
+input:focus {
+    outline: none !important;
 }
