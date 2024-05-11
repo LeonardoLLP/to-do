@@ -77,7 +77,7 @@ let addButton = (() => {
 
     return {
         button: new_button,
-        text: new_text, 
+        text: new_text,
     }
 })
 
