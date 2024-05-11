@@ -11,7 +11,7 @@ function deleteParentItem(e) {
         console.log("Checking again");
         a = e.target.parentNode;
     }
-    if (a === undefined) {
+    if (a === undefined || a === e.target) {
         console.log("Can't erase target");
     }
     else a.remove();
@@ -71,7 +71,7 @@ let addButton = (() => {
 
     // Focus on next element or create new one
     new_text.addEventListener("keydown", (e) => {
-        if (e.key == "Enter") addButton();
+        if (e.key === "Enter") addButton();
     })
 
     new_text.focus();
