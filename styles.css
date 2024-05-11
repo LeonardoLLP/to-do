@@ -36,13 +36,13 @@ li {
     box-sizing: border-box;
 }
 
-li#add-button {
+#add-button, #clear-button {
     border: 5px solid white;
     cursor: pointer;
     padding-left: 1rem;
 }
 
-li#add-button:hover {
+#add-button:hover, #clear-button:hover {
     color: gray;
 }
 
