@@ -1,8 +1,8 @@
 "use strict";
 
 let todoList = document.querySelector("#todo-list");
-let buttonAdd = document.querySelector("#add-button");
-let buttonClear = document.querySelector("#clear-button");
+let addButton = document.querySelector("#add-button");
+let clearButton = document.querySelector("#clear-button");
 let listArray = [];
 
 function deleteParentItem(e) {
@@ -21,7 +21,7 @@ function focusText(e) {
     e.target.firstElementChild.focus();
 }
 
-let addButton = (() => {
+let addItem = (() => {
     console.log("triggered addButton");
     let svg_url = "http://www.w3.org/2000/svg";
 
@@ -54,7 +54,7 @@ let addButton = (() => {
     new_textarea.append(new_text);
     new_button.append(new_checkbox, new_textarea);
 
-    buttonAdd.before(new_button);
+    addButton.before(new_button);
     listArray.push(new_button);
 
     // Delete element from array
@@ -71,7 +71,7 @@ let addButton = (() => {
 
     // Focus on next element or create new one
     new_text.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") addButton();
+        if (e.key === "Enter") addItem();
     })
 
     new_text.focus();
@@ -82,7 +82,7 @@ let addButton = (() => {
     }
 })
 
-buttonAdd.addEventListener("click", addButton)
+addButton.addEventListener("click", addItem)
 
 
 // Cookies to save list.
@@ -109,7 +109,7 @@ function getCookieList() {
         let items = list.split("&");
         for (let item of items) {
             if (item == "") continue;
-            let todo_item = addButton();
+            let todo_item = addItem();
             todo_item.text.value = item;
         }
         break;
