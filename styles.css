@@ -92,3 +92,7 @@ ul#todo-list {
 input:focus {
     outline: none !important;
 }
+
+input::placeholder {
+    font-style: italic;
+}
