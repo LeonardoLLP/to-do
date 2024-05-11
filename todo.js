@@ -54,7 +54,7 @@ let addItem = (() => {
     new_textarea.append(new_text);
     new_button.append(new_checkbox, new_textarea);
 
-    addButton.before(new_button);
+    todoList.append(new_button);
     listArray.push(new_button);
 
     // Add item deletion on checkbox click
