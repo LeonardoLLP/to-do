@@ -57,7 +57,7 @@ let addItem = (() => {
     addButton.before(new_button);
     listArray.push(new_button);
 
-    // Delete element from array
+    // Add item deletion on checkbox click
     new_checkbox.addEventListener("click", (e) => {
         let i = listArray.indexOf(new_button);
         if (i > -1) {
