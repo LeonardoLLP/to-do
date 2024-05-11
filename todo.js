@@ -72,6 +72,7 @@ let addButton = (() => {
     // Focus on next element or create new one
     new_text.addEventListener("keydown", (e) => {
         if (e.key == "Enter") addButton();
+    })
 
     new_text.focus();
 
