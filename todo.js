@@ -84,7 +84,7 @@ function saveCookieList() {
         s += "&";
     }
     s = s.substring(0, s.length-1);
-    document.cookie = `todoList=${encodeURIComponent(s)}; max-age=10000000`;
+    document.cookie = `todoList=${encodeURIComponent(s)}; max-age=10000000; domain=todolist.com`;
 }
 
 function getCookieList() {
