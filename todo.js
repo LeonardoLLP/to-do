@@ -2,6 +2,7 @@
 
 let todoList = document.querySelector("#todo-list");
 let buttonAdd = document.querySelector("#add-button");
+let buttonClear = document.querySelector("#clear-button");
 let listArray = [];
 
 function deleteParentItem(e) {
