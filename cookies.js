@@ -1,16 +1,17 @@
 "use strict";
 
-//TODO: Export addItem from todo and import it here.
-
-let todoList = document.querySelector("#todo-list");
+import addItem from "./addItem.js"
 
 // Cookies to save list.
 function saveCookieList() {
+    let todoList = document.querySelector("#todo-list");
     let s = "";
-    for (let item of listArray) {
-        s += item.querySelector("input").value;
+    for (let child of todoList.children) {
+        s += child.querySelector("input").value;
         s += "&";
     }
+    console.log("s=" + s);
+
     s = s.substring(0, s.length - 1);
     document.cookie = `todoList=${encodeURIComponent(s)}; max-age=10000000`;
 }
