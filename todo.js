@@ -67,6 +67,16 @@ let addButton = (() => {
         console.log("Final array:");
         console.log(listArray);
     })
+
+    // Focus on next element or create new one
+    new_text.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+            addButton();
+        }
+    })
+
+    new_text.focus();
+
     return {
         button: new_button,
         text: new_text, 
@@ -84,7 +94,7 @@ function saveCookieList() {
         s += "&";
     }
     s = s.substring(0, s.length-1);
-    document.cookie = `todoList=${encodeURIComponent(s)}; max-age=10000000; domain=todolist.com`;
+    document.cookie = `todoList=${encodeURIComponent(s)}; max-age=10000000`;
 }
 
 function getCookieList() {
@@ -99,6 +109,7 @@ function getCookieList() {
         let list = cookie.substring(p+1);
         let items = list.split("&");
         for (let item of items) {
+            if (item == "") continue;
             let todo_item = addButton();
             todo_item.text.value = item;
         }
