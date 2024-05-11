@@ -1,7 +1,8 @@
 "use strict";
 
-//TODO: Need to reference listArray. how to share between files?
 //TODO: Export addItem from todo and import it here.
+
+let todoList = document.querySelector("#todo-list");
 
 // Cookies to save list.
 function saveCookieList() {
