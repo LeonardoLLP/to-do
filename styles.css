@@ -103,5 +103,6 @@ input::placeholder {
 }
 
 #buttons > div {
-    width: 200px;
+    width: 250px;
+    margin-right: 15px;
 }
