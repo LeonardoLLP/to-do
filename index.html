@@ -12,12 +12,19 @@
 </head>
 <body>
     <h1>To do list</h1>
-    <div id="buttons">
-        <div id="add-button">
-            <p>Add new item</p>
+    <div id="buttons-list">
+        <div class="button" id="add-button">
+            <svg class="button-icon" id="plus-icon" viewBox="0 0 100 100">
+                <line x1="50" x2="50" y1="0" y2="100" />
+                <line x1="0" x2="100" y1="50" y2="50" />
+            </svg>
+            <div class="button-text">Add new item</div>
         </div>
-        <div id="clear-button">
-            <p>Clear list</p>
+        <div class="button" id="clear-button">
+            <svg class="button-icon" id="minus-icon" viewBox="0 0 100 100">
+                <line x1="0" x2="100" y1="50" y2="50" />
+            </svg>
+            <div class="button-text">Clear list</div>
         </div>
     </div>
     <hr />
