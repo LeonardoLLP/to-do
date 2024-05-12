@@ -1,0 +1,63 @@
+ul, #buttons-list {
+    --checkbox-width: 22px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0;
+    font-size: 15px;
+}
+
+li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul#todo-list {
+    list-style-type: none;
+}
+
+.todo-item {
+    height: 2rem;
+    position: relative;
+}
+
+.item-check {
+    width: var(--checkbox-width);
+    height: 100%;
+    display: inline-block;
+}
+
+.item-textarea {
+    width: calc(100% - var(--checkbox-width));
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: var(--checkbox-width);
+
+}
+.item-textarea:hover {
+    cursor: text;
+}
+
+.item-text {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 1rem);
+    margin: 0;
+    padding-left: 1rem;
+    text-align: begin;
+    color: white;
+    vertical-align: middle;
+    position: relative;
+    background: transparent;
+    border: none;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+input::placeholder {
+    font-style: italic;
+}
